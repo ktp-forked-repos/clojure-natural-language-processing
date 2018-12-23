@@ -1,0 +1,429 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>NLP introduction · Practicalli Natural Language Processing in Clojure</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.commonlounge.com/discussion/c1f472553ece4d68bad9bd423fb775cf" target="_blank" class="custom-link">NLP Beginner to Expert</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://practicalli.github.io" target="_blank" class="custom-link">Practical.li</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview/">
+            
+                <a href="../overview/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../overview/concepts.html">
+            
+                <a href="../overview/concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Beginner to Expert
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="nlp-introduction.html">
+            
+                <a href="nlp-introduction.html">
+            
+                    
+                    NLP introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >NLP introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="natural-language-processing-introduction">Natural Language Processing Introduction</h1>
+<p>Natural Language Processing (NLP) consists of a set of algorithms and tools so that machines can make sense of data available in natural (human) languages such as English, German, French, etc. Although there are traces of NLP research since a long time ago, the concept got well defined in the 1950s, with the breakthrough research work of Alan Turing and Noam Chomsky.</p>
+<p>This tutorial introduces you to the various applications, challenges and approaches within NLP. In this course, we&apos;ll build many of these applications and encounter the challenges described.</p>
+<h2 id="what-is-natural-language">What is Natural Language?</h2>
+<p>Natural language refers to the medium in which humans communicate with each other. This could be in the form of writings (text) for example emails, articles, news, blogs, bank documents, etc or speech for example lectures, speeches, audio calls, etc. There are trillions of web pages full of natural text, so imagine the scale of data available today.</p>
+<p>NLP algorithms often model the hierarchical structure of natural language i.e. characters form words, words form phrases, phrases form sentences, sentences form paragraphs, and paragraphs form documents.</p>
+<h2 id="applications-of-nlp">Applications of NLP</h2>
+<p>Let&apos;s discuss some common NLP applications and use cases:</p>
+<p>Document Classification deals with classifying textual documents and assigning it one or multiple categories. Example applications include, classifying news articles into categories like sports, politics, business, technology, etc, or segregating different types of invoices and sales deeds in a large company.</p>
+<p>Document Clustering is used to find similar documents and segregate them to form groups. Documents that are closely related will be part of the same group. Example applications include finding similar questions that have already posted in a forum, or finding new published medical research related to a patient&apos;s symptoms.</p>
+<p>Sentiment Analysis is used to classify text for different sentiments ranging from negative to neutral to positive. This is commonly used to understand customer opinions from product reviews or their posts on social media.</p>
+<p>Document Summarization helps to extract the most important and central ideas in a document. For example, one could train a model to summarize a 3000 word article to 200 words. This allows the reader to save time and get the gist, and is often useful for news, research papers, etc.</p>
+<p>Named Entity Recognition, also known as entity extraction, identifies named entities and classifies them into categories such as person, organization, location, etc. Such a system can be used by stock investors to follow news corresponding to companies they have invested in, or to get news relating to your favorite sports players and teams from across various news sources.</p>
+<p>Question Answering systems are intelligent systems that generate responses to the questions being asked by the user. Such systems often use facts and rules stored in their knowledge base. Many conversational AI and personal assistant solutions (for example Amazon Alexa) are able to perform question answering.</p>
+<p>Machine Translation is the task of automatically translating from one natural language to another. This is the task Google translate is performing when you visit a website that is written in a language you do not understand.</p>
+<h2 id="components-of-nlp">Components of NLP</h2>
+<p>There are 2 main components of natural language processing - natural language understanding, and natural language generation.</p>
+<h3 id="natural-language-understanding-nlu">Natural Language Understanding (NLU)</h3>
+<p>NLU enables machines to understand the intent or the meaning of the text. The different levels of analysis that NLU requires are as follows:</p>
+<p>Morphological Analysis is the analysis of the structure of individual words. A morpheme is defined as the &quot;minimal unit of meaning&quot;. For example, the words &quot;care&quot;, &quot;cares&quot;, &quot;caring&quot;, &quot;careless&quot;, &quot;careful&quot;, &quot;uncaring&quot; are different forms of the same word, with stem &quot;care&quot;. Also note that the structure of a word could include a prefix (&quot;un-&quot; in &quot;uncaring&quot;) or a suffix (&quot;-less&quot; in &quot;careless&quot;).</p>
+<p>Syntactic Analysis (also called parsing) involves analysis of words in the sentence for grammar. For example, syntactic analysis is used by Microsoft Word, Google Docs, etc to highlight phrases with incorrect grammar.</p>
+<p>Semantic Analysis uses morphological and syntactic knowledge to understand the meaning, intent and purpose of the text as a whole. For example, consider the two sentences &quot;I went to the market in my shorts&quot; vs &quot;I went to the market in the city&quot;. In terms of grammar (syntax) the two sentences are equivalent. However, based on semantics (meaning), we know that &quot;in my shorts&quot; refers to &quot;I&quot;, whereas &quot;in the city&quot; refers to the &quot;market&quot;. Semantic analysis is necessary since grammar leaves a lot of ambiguity, and we implicitly rely on a shared understanding of the world to communicate with each other.</p>
+<p>Discourse Analysis is a more advanced stage of NLU where we perform syntactic or semantic analysis in a longer piece of text. That is, the analysis is performed over a paragraph or an entire document, as opposed to a single sentence.</p>
+<h3 id="natural-language-generation-nlg">Natural Language Generation (NLG)</h3>
+<p>Once the machine understands the natural language, NLG is used to respond in natural language, or to produce written text. Recent applications include chat-bots and personal assistants like Alexa and Siri. In general, NLG systems are more complex than NLU. Some approaches to NLG are:</p>
+<p><em>Content Determination</em> involves deciding what information we need to convey in the generated text. There are pre-built schemas or templates to specify the content. Using knowledge-based rules and pattern detection, the words in these templates are predicted. For example, when Google Assistant is asked the age of a person, it responds &quot;{person_name} is {age} years old. {He/She} was born on {date}.&quot;</p>
+<p><em>Planning / Micro-planning</em> involves finding, mixing and merging different sentence representations into more concise representation. For example, if the predicted response for an input is a set of 3 sentences - &quot;Larry is feeling sleepy&quot;, &quot;Larry is drinking coffee&quot; and &quot;Coffee is hot&quot;, a better concise representation would be &quot;Since Larry is sleepy, he is drinking hot coffee&quot;.</p>
+<p><em>Deep Learning</em> is a subfield within machine learning which has proven very successful in applications that require language generation, such as translation and question answering. The last section of this course covers Deep Learning methods for NLP. Whereas the above two approaches involve lots of hand-crafted rules, deep learning can be used in an &apos;end-to-end&apos; fashion.</p>
+<h2 id="challenges-in-nlp">Challenges in NLP</h2>
+<p>The properties and nature of natural language bring many challenges to NLP. A few of these are discussed below:</p>
+<p>Assumed knowledge / common sense: By far the biggest challenge in NLP is that anytime we communicate, we have an inherent assumption about the knowledge the reader has. Even though this knowledge might seem very basic for a human, a computer does not have access to such knowledge. When we say &quot;Fox jumped over the fence&quot; vs &quot;Fox jumped over the building&quot; vs &quot;Fox jumped over the leaf&quot;, we know that the first is sensible, second is not possible, and third is too insignificant (and hence weird) to mention. All of this depends on our understanding of a fox, a fence, a leaf, etc.</p>
+<p>Volume: A huge amount of text is available online, and in documents within organizations. This large amount of data is a great bonus for machine learning approaches to NLP, but at the same time, it requires our solutions to be computationally efficient.</p>
+<p>Variation: Natural language is infinitely wide in terms of vocabulary, dialects, etc. Understanding all these different types of languages and variations in dialects makes NLP much harder than having one standardized language across the globe.</p>
+<p>Complex: The way concepts link together to convey meaning is often quite complex for an algorithm to understand. For example, a large percentage of words have different meaning depending on the context in which they are used. Words like &quot;set&quot; and &quot;run&quot; have more than 300 definitions depending on context (homonyms). Consider the word &quot;having&quot; in &quot;Adam is having coffee&quot; vs &quot;Adam is having a good time&quot;.</p>
+<p>Grammar is vague: Sometimes grammatical rules are not well defined, and often, there are exceptions to grammatical rules. Grammar also leaves ambiguity in possible meanings. We saw this in the &quot;I went to the market&quot; example above. Another example is, &quot;Robert really likes Michael. He is such a charming personality.&quot; Based on grammar alone, it is not possible to know whether &quot;he&quot; refers to &quot;Robert&quot; or &quot;Michael&quot;.</p>
+<p>Expressions: Emotions or sarcasm in written text have proven quite difficult for an algorithm to understand. The literal meaning for &quot;I work 40 hours a week to be this poor&quot; is very different from the intended meaning.</p>
+<h2 id="approaches-to-nlp">Approaches to NLP</h2>
+<p>Broadly there are 3 different ways to approach any problem in NLP.</p>
+<h3 id="computational-linguistics">Computational Linguistics</h3>
+<p>It is the mathematical or scientific study of language. In this approach, classical linguists devised various language rules for grammar, part-of-speech, etc. The NLP algorithms are based on discrete mathematics such as automata, probability, and co-occurrence statistics of words. Most of the theories given by Noam Chomsky were based on computational linguistics.</p>
+<h3 id="machine-learning">Machine Learning</h3>
+<p>In machine learning approach, the text data is converted to a numerical vector. These vectors could be based on the frequency of words or how they co-occur with neighbouring words. One such meaningful representation is tf-idf, which we&apos;ll see in the next tutorial.</p>
+<p>Once the text is transformed to vectors, machine learning algorithms such as Naive Bayes&apos;, Support Vector Machine, etc. can be used to classify text data or perform other tasks.</p>
+<p>Machine learning methods for NLP have now become so popular that they have mostly taken over computational linguistics. The fact that substantial amount of text is now available to train accurate models is an important contributing factor to this development. The other factor for inclination towards machine learning is that rule-based systems are difficult to scale because the exclusive hand-crafted rules are required for each natural language, while machine learning can be adopted easily across different languages.</p>
+<h3 id="deep-learning">Deep Learning</h3>
+<p>Deep learning is a subfield of machine learning focused on training models that are more complex and flexible than traditional machine learning models. These methods have achieved state-of-the-art results in problems such as translation and question answering. The increase in processing power and availability of large amounts of textual data has enabled us to train deep neural networks and achieve high accuracy.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In the upcoming tutorials, we will encounter many of the applications, approaches and challenges described in this article. Wishing you a happy journey in exploring natural language processing. :)</p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Beginner to Expert">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NLP introduction","level":"1.3.1","depth":2,"previous":{"title":"Beginner to Expert","level":"1.3","depth":1,"path":"beginner-to-expert/index.md","ref":"beginner-to-expert/index.md","articles":[{"title":"NLP introduction","level":"1.3.1","depth":2,"path":"beginner-to-expert/nlp-introduction.md","ref":"beginner-to-expert/nlp-introduction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"practicalli-nlp-clojure","useIdentifier":false},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"ga":{"token":"UA-28030709-11","configuration":"auto"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Gitter Chat","icon":"fa fa-comments-o","url":"https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli"},{"label":"Search page title on StackOverflow","icon":"fa fa-stack-overflow","url":"http://stackoverflow.com/search?q={{title}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li"},"title":"Practicalli Natural Language Processing in Clojure","links":{"sidebar":{"NLP Beginner to Expert":"https://www.commonlounge.com/discussion/c1f472553ece4d68bad9bd423fb775cf","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Building Natural Language Programming systems in Clojure"},"file":{"path":"beginner-to-expert/nlp-introduction.md","mtime":"2018-12-23T12:30:34.826Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2018-12-23T13:08:06.065Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-codeblock-disable-glossary/disable-glossary.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-gist/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
